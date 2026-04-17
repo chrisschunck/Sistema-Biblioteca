@@ -22,3 +22,9 @@ class Membro {
         }
     }
 
+public String toString() {
+    return "
+        "Membroid =" membroid +
+        ", nome =" nome + 
+        ", email =" email"
+}
