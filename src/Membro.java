@@ -22,6 +22,7 @@ class Membro {
         }
     }
 
+@Override
 public String toString() {
     return "
         "Membroid =" membroid +
