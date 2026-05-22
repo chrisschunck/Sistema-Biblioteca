@@ -44,7 +44,7 @@ public class Main {
         scanner.close();
 
         if (resposta.equalsIgnoreCase("s")) {
-            biblioteca.removerLivro(l);
+            biblioteca.removerLivro(livro);
         }
 
 
