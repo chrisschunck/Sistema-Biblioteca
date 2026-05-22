@@ -3,21 +3,21 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-        Scanner sc = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
 
         System.out.println("===Registrar novo membro===");
 
         System.out.print("Digite um id para o membro: ");
-        int membroId = sc.nextInt();
+        int membroId = scanner.nextInt();
         sc.nextLine();
 
         System.out.print("Digite o nome: ");
-        String nome = sc.nextLine();
+        String nome = scanner.nextLine();
 
         System.out.print("Digite o email do membro: ");
-        String email = sc.nextLine();
+        String email = scanner.nextLine();
 
-        Membro m = new Membro(membroId, nome,  email);
+        Membro membro = new Membro(membroId, nome,  email);
         System.out.println("Membro " + nome + " possui id: " + membroId + " e email: " + email);
         System.out.println("Cadastrado com sucesso!");
 
@@ -25,23 +25,23 @@ public class Main {
 
         System.out.println("===Registrar novo livro===");
         System.out.print("Digite o id do livro: ");
-        int livroId = sc.nextInt();
-        sc.nextLine();
+        int livroId = scanner.nextInt();
+        scanner.nextLine();
 
         System.out.print("Digite o titulo: ");
-        String titulo = sc.nextLine();
+        String titulo = scanner.nextLine();
 
         System.out.print("Digite o autor: ");
-        String autor = sc.nextLine();
+        String autor = scanner.nextLine();
 
-        Livro l = new Livro(livroId, titulo, autor);
+        Livro livro = new Livro(livroId, titulo, autor);
 
         Biblioteca biblioteca = new Biblioteca();
 
-        biblioteca.adicionarLivro(l);
+        biblioteca.adicionarLivro(livro);
         System.out.print("Deseja remover o livro? (s/n): ");
-        String resposta = sc.nextLine();
-        sc.close();
+        String resposta = scanner.nextLine();
+        scanner.close();
 
         if (resposta.equalsIgnoreCase("s")) {
             biblioteca.removerLivro(l);
